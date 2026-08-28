@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maps4agent"
+version = "0.1.0"
+description = "maps: Google Maps from the shell — places, parking, directions, park+ride routes."
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+maps = "maps4agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+maps4agent = ["*.md"]
